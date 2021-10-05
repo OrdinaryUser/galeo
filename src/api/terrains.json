@@ -1,0 +1,8 @@
+[
+  {
+    "terrainId": 1,
+    "terrainName": "Grass",
+    "description": "An empty field of wild grass blowing in the wind.",
+    "imageUrl": "assets/images/terrain/grass.png"
+  }
+]
