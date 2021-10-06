@@ -1,5 +1,9 @@
-﻿<div class="chunk-bg">
-    <img *ngIf='showBackground'
-        [src]='terrainUrl'
-        [title]='terrainDescription' />
+﻿<div class="chunk">
+    <img class="chunk-bg"
+         [src]='terrainUrl'
+         [title]='terrainDescription' />
+    <img class="chunk-obj"
+         *ngIf='objectUrl'
+         [src]='objectUrl'
+         [title]='objectDescription' />
 </div>

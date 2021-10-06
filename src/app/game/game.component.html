@@ -1,9 +1,9 @@
-﻿<div class="game-board">
-  <div class="chunk" *ngFor='let chunk of map' style="width:600px">
-    <div class="chunk-bg">
-      <img *ngIf='chunk.showBackground'
-           [src]='chunk.terrainUrl'
-           [title]='chunk.terrainDescription' />
-    </div>
-  </div>
+﻿<div class="game-board" getElementDirective>
+  <galeo-chunk *ngFor='let chunk of map'
+               class="chunk"
+               [terrainUrl]='chunk.terrainUrl'
+               [terrainDescription]='chunk.terrainDescription'
+               [objectUrl]='chunk.objectUrl'
+               [objectDescription]='chunk.objectDescription'>
+  </galeo-chunk>
 </div>

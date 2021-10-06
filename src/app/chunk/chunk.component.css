@@ -1,3 +1,20 @@
 .chunk {
     display: flex-child;
+    width: 400px;
+    position: relative;
+    top:0;
+    left:0;
+}
+.chunk img {
+    width: 100%;
+}
+img.chunk-bg img {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+img.chunk-obj {
+    position:absolute;
+    top:0;
+    left:0;
 }

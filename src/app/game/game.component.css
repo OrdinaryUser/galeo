@@ -1,8 +1,11 @@
 .game-board {
     border: 2px solid black;
     display: flex;
-    width: 1200px;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+    width: 800px;
+    margin: auto;
 }
-.chunk-bg img {
-    width: 100%;
+galeo-chunk {
+    width: 400px;
 }
