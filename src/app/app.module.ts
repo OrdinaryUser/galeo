@@ -6,11 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { GameComponent } from './game/game.component';
 import { RouterModule } from '@angular/router';
+import { ChunkComponent } from './chunk/chunk.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameComponent
+    GameComponent,
+    ChunkComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,8 @@
+.game-board {
+    border: 2px solid black;
+    display: flex;
+    width: 1200px;
+}
+.chunk-bg img {
+    width: 100%;
+}
