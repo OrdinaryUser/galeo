@@ -22,5 +22,17 @@
     "name": "Forest",
     "assetUrl": "assets/images/chunkobject/forest.png",
     "description": "A dense forest."
+  },
+  {
+    "id": 4,
+    "name": "Mountain",
+    "assetUrl": "assets/images/chunkobject/mountain.png",
+    "description": "A mountain that towers into the clouds."
+  },
+  {
+    "id": 5,
+    "name": "Volcano",
+    "assetUrl": "assets/images/chunkobject/volcano.png",
+    "description": "This volcano bubbles with boiling lava."
   }
 ]

@@ -2,7 +2,9 @@
   <h1>Welcome to Galeo!</h1>
   <p>Use the WASD keys to navigate the knight to the exit door.</p>
 </div>
-<div class="game-board">
+<div class="game-board"
+     [style.width.px]='gameSize'
+     [style.display]='gameDisplay'>
   <galeo-chunk *ngFor='let chunk of map.mapChunks'
                class="chunk"
                [terrainName]='chunk.terrainName'
@@ -11,4 +13,8 @@
                [yPosition]='chunk.yPosition'
                [style.width.px]='mapChunkSize'>
   </galeo-chunk>
+</div>
+<div class="congratulations" [style.display]='congratDisplay'>
+  Congratulations! You've beaten the level!
+  <a class="btn btn-primary" href="">Play again?</a>
 </div>

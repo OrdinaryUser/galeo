@@ -8,11 +8,10 @@ import { MapService } from '../shared/services/map.service';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
-  public gameSize = 1200;
-  public mapColumns: number = 2;
-  public mapRows: number = 2;
-  public mapChunkSize: number = 1200;
-  // Cartesian plane x/y coordinates
+  public gameSize: number = 800;
+  public mapChunkSize: number = 800;
+  public gameDisplay: string = 'flex';
+  public congratDisplay: string = 'none';
   public map: Map = {
     "mapName": "undefined",
     "mapDifficulty": "undefined",
@@ -34,7 +33,8 @@ export class GameComponent implements OnInit {
     this.msub = this.mapService.getMaps().subscribe({
       next: maps => {
         // Pick a random map
-        this.map = maps[Math.floor(Math.random() * maps.length)];
+        //this.map = maps[Math.floor(Math.random() * maps.length)];
+        this.map = maps[2];
         this.ArrangeMap();
         this.mapChunkSize = this.gameSize / this.getMapWidth();
       },
@@ -83,8 +83,12 @@ export class GameComponent implements OnInit {
     // Don't move if the player is at the top of the map
     if(playerChunk !== undefined && playerChunk.yPosition !== this.getMapHeight()) {
       var targetChunkIndex = this.map.mapChunks.findIndex(c => c.xPosition === playerChunk.xPosition && c.yPosition === playerChunk.yPosition + 1);
-      if(targetChunkIndex !== undefined) {
+      var targetChunk = this.map.mapChunks[targetChunkIndex];
+      if(targetChunk !== undefined && targetChunk.traversable) {
         this.MovePlayer(playerChunkIndex, targetChunkIndex);
+        if(targetChunk.objectName === "Exit") {
+          this.EndLevel();
+        }
       }
     } 
   }
@@ -96,8 +100,12 @@ export class GameComponent implements OnInit {
     // Don't move if the player is at the far left side of the map
     if(playerChunk !== undefined && playerChunk.xPosition !== 1) {
       var targetChunkIndex = this.map.mapChunks.findIndex(c => c.xPosition === playerChunk.xPosition - 1 && c.yPosition === playerChunk.yPosition);
-      if(playerChunkIndex !== undefined) {
+      var targetChunk = this.map.mapChunks[targetChunkIndex];
+      if(targetChunk !== undefined && targetChunk.traversable) {
         this.MovePlayer(playerChunkIndex, targetChunkIndex);
+        if(targetChunk.objectName === "Exit") {
+          this.EndLevel();
+        }
       }
     }
   }
@@ -109,8 +117,12 @@ export class GameComponent implements OnInit {
     // Don't move if the player is at the bottom of the map
     if(playerChunk !== undefined && playerChunk.yPosition !== 1) {
       var targetChunkIndex = this.map.mapChunks.findIndex(c => c.xPosition === playerChunk.xPosition && c.yPosition === playerChunk.yPosition - 1);
-      if(playerChunkIndex !== undefined) {
+      var targetChunk = this.map.mapChunks[targetChunkIndex];
+      if(targetChunk !== undefined && targetChunk.traversable) {
         this.MovePlayer(playerChunkIndex, targetChunkIndex);
+        if(targetChunk.objectName === "Exit") {
+          this.EndLevel();
+        }
       }
     }
   }
@@ -122,9 +134,18 @@ export class GameComponent implements OnInit {
     // Don't move if the player is at the far left side of the map
     if(playerChunk !== undefined && playerChunk.xPosition !== this.getMapWidth()) {
       var targetChunkIndex = this.map.mapChunks.findIndex(c => c.xPosition === playerChunk.xPosition + 1 && c.yPosition === playerChunk.yPosition);
-      if(playerChunkIndex !== undefined) {
+      var targetChunk = this.map.mapChunks[targetChunkIndex];
+      if(targetChunk !== undefined && targetChunk.traversable) {
         this.MovePlayer(playerChunkIndex, targetChunkIndex);
+        if(targetChunk.objectName === "Exit") {
+          this.EndLevel();
+        }
       }
     }
+  }
+
+  public EndLevel() {
+    this.gameDisplay = 'none';
+    this.congratDisplay = 'flex';
   }
 }

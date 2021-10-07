@@ -72,7 +72,7 @@
     "mapDifficulty": "Easy",
     "mapChunks": [
       {
-        "terrainName": "Grass",
+        "terrainName": "Cobblestone",
         "objectName": "Player",
         "xPosition": 1,
         "yPosition": 1,
@@ -87,20 +87,20 @@
       },
       {
         "terrainName": "Grass",
-        "objectName": "",
+        "objectName": "Mountain",
         "xPosition": 3,
         "yPosition": 1,
-        "traversable": true
+        "traversable": false
       },
       {
-        "terrainName": "Grass",
+        "terrainName": "Cobblestone",
         "objectName": "",
         "xPosition": 1,
         "yPosition": 2,
         "traversable": true
       },
       { 
-        "terrainName": "Stones",
+        "terrainName": "Cobblestone",
         "objectName": "Rock",
         "xPosition": 2,
         "yPosition": 2,
@@ -114,21 +114,21 @@
         "traversable": false
       },
       { 
-        "terrainName": "Grass",
+        "terrainName": "Cobblestone",
         "objectName": "",
         "xPosition": 1,
         "yPosition": 3,
         "traversable": true
       },
       { 
-        "terrainName": "Grass",
+        "terrainName": "Cobblestone",
         "objectName": "",
         "xPosition": 2,
         "yPosition": 3,
         "traversable": true
       },
       {
-        "terrainName": "Grass",
+        "terrainName": "Cobblestone",
         "objectName": "Exit",
         "xPosition": 3,
         "yPosition": 3,
