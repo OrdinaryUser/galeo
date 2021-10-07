@@ -10,7 +10,7 @@ import { ObjectService } from '../shared/object.service';
   templateUrl: './chunk.component.html',
   styleUrls: ['./chunk.component.css']
 })
-export class ChunkComponent implements OnInit, OnDestroy {
+export class ChunkComponent implements OnChanges, OnDestroy {
   // These will be defined by the map in the game component
   @Input() terrainName: string = '';
   @Input() objectName: string = '';
@@ -26,7 +26,7 @@ export class ChunkComponent implements OnInit, OnDestroy {
 
   constructor(private terrainService: TerrainService, private objectService: ObjectService) { }
 
-  ngOnInit(): void {
+  ngOnChanges(): void {
     this.tsub = this.terrainService.getTerrains().subscribe({
       next: terrains => {
         this.terrain = terrains.find(t => t.name === this.terrainName);

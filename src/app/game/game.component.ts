@@ -38,44 +38,105 @@ export class GameComponent implements OnInit {
       yPosition: 2
     }
   ];
-
-  ngOnInit() {
-    this.ArrangeMap(this.map);
+  public getMapHeight(): number {
+    return Math.max.apply(Math, this.map.map(function(o) { return o.yPosition }))
+  }
+  public getMapWidth(): number {
+    return Math.max.apply(Math, this.map.map(function(o) { return o.xPosition }))
   }
 
-  public ArrangeMap(map: Array<MapChunk>): void {
+  ngOnInit() {
+    console.log(this.map);
+    this.ArrangeMap();
+    console.log(this.map);
+  }
+
+  public ArrangeMap(): void {
     // Looks complicated but basically..
     // Put higher y coordinate first, then lower x coordinates
-    map.sort((a, b) => (a.yPosition < b.yPosition) ? 1 : (a.yPosition === b.yPosition) ? ((a.xPosition > b.xPosition) ? 1 : -1) : -1);
+    this.map.sort((a, b) => (a.yPosition < b.yPosition) ? 1 : (a.yPosition === b.yPosition) ? ((a.xPosition > b.xPosition) ? 1 : -1) : -1);
   }
 
   public key?: string;
-/*
   @HostListener('document:keypress', ['$event'])
-  handleKeyboardEvent(event: KeyboardEvent) { 
+  handleKeyboardEvent(event: KeyboardEvent) {
     this.Move(event.key)
   }
 
   public Move(direction: string): void {
-    switch(this.key) {
+    switch(direction) {
       case 'w':
-        MoveUp();
+        this.MoveUp();
         break;
       case 'a':
-        MoveLeft();
+        this.MoveLeft();
         break;
+        
       case 's':
-        MoveDown();
+        this.MoveDown();
         break;
       case 'd':
-        MoveRight();
+        this.MoveRight();
         break;
       default:
         break;
     }
   }
-*/
-  public MoveUp(): void {
 
+  public MovePlayer(from: number, to: number) {
+    this.map[from].objectName = '';
+    this.map[to].objectName = 'Player';
+  }
+
+  public MoveUp() {
+    var playerChunkIndex = this.map.findIndex(c => c.objectName === "Player");
+    var playerChunk = this.map[playerChunkIndex];
+
+    // Don't move if the player is at the top of the map
+    if(playerChunk !== undefined && playerChunk.yPosition !== this.getMapHeight()) {
+      var targetChunkIndex = this.map.findIndex(c => c.xPosition === playerChunk.xPosition && c.yPosition === playerChunk.yPosition + 1);
+      if(targetChunkIndex !== undefined) {
+        this.MovePlayer(playerChunkIndex, targetChunkIndex);
+      }
+    } 
+  }
+
+  public MoveLeft() {
+    var playerChunkIndex = this.map.findIndex(c => c.objectName === "Player");
+    var playerChunk = this.map[playerChunkIndex];
+
+    // Don't move if the player is at the far left side of the map
+    if(playerChunk !== undefined && playerChunk.xPosition !== 1) {
+      var targetChunkIndex = this.map.findIndex(c => c.xPosition === playerChunk.xPosition - 1 && c.yPosition === playerChunk.yPosition);
+      if(playerChunkIndex !== undefined) {
+        this.MovePlayer(playerChunkIndex, targetChunkIndex);
+      }
+    }
+  }
+
+  public MoveDown() {
+    var playerChunkIndex = this.map.findIndex(c => c.objectName === "Player");
+    var playerChunk = this.map[playerChunkIndex];
+
+    // Don't move if the player is at the bottom of the map
+    if(playerChunk !== undefined && playerChunk.yPosition !== 1) {
+      var targetChunkIndex = this.map.findIndex(c => c.xPosition === playerChunk.xPosition && c.yPosition === playerChunk.yPosition - 1);
+      if(playerChunkIndex !== undefined) {
+        this.MovePlayer(playerChunkIndex, targetChunkIndex);
+      }
+    }
+  }
+
+  public MoveRight() {
+    var playerChunkIndex = this.map.findIndex(c => c.objectName === "Player");
+    var playerChunk = this.map[playerChunkIndex];
+
+    // Don't move if the player is at the far left side of the map
+    if(playerChunk !== undefined && playerChunk.xPosition !== this.getMapWidth()) {
+      var targetChunkIndex = this.map.findIndex(c => c.xPosition === playerChunk.xPosition + 1 && c.yPosition === playerChunk.yPosition);
+      if(playerChunkIndex !== undefined) {
+        this.MovePlayer(playerChunkIndex, targetChunkIndex);
+      }
+    }
   }
 }
