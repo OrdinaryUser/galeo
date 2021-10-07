@@ -1,18 +1,48 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ChunkObject } from '../shared/ChunkObject';
+import { ChunkTerrain } from '../shared/ChunkTerrain';
+import { TerrainService } from '../shared/terrain.service';
+import { ObjectService } from '../shared/object.service';
 
 @Component({
   selector: 'galeo-chunk',
   templateUrl: './chunk.component.html',
   styleUrls: ['./chunk.component.css']
 })
-export class ChunkComponent {
-  @Input() terrainUrl: string = 'assets/images/terrain/hidden.png';
-  @Input() terrainDescription: string = 'Nothing here that you can see.';
-  @Input() objectUrl: string | null = null;
-  @Input() objectDescription: string | null = null;
-  public traversable: boolean = true;
-  public xPosition: number = 1;
-  public yPosition: number = 1;
+export class ChunkComponent implements OnInit, OnDestroy {
+  // These will be defined by the map in the game component
+  @Input() terrainName: string = '';
+  @Input() objectName: string = '';
+  @Input() xPosition: number = 1;
+  @Input() yPosition: number = 1;
+  errorMessage?: string = '';
+  tsub: Subscription = new Subscription();
+  osub: Subscription = new Subscription();
 
-  constructor() { };
+  // These will be filled based on the names provided
+  public terrain?: ChunkTerrain;
+  public object?: ChunkObject;
+
+  constructor(private terrainService: TerrainService, private objectService: ObjectService) { }
+
+  ngOnInit(): void {
+    this.tsub = this.terrainService.getTerrains().subscribe({
+      next: terrains => {
+        this.terrain = terrains.find(t => t.name === this.terrainName);
+      },
+      error: err => this.errorMessage += err
+    });
+
+    this.osub = this.objectService.getObjects().subscribe({
+      next: objects => {
+        this.object = objects.find(o => o.name === this.objectName);
+      },
+      error: err => this.errorMessage += err
+    });
+  }
+
+  ngOnDestroy(): void {
+      this.tsub.unsubscribe();
+  }
 }

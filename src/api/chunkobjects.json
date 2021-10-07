@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "name": "Player",
+    "assetUrl": "assets/images/chunkobject/knight.png",
+    "description": "Our valiant hero!"
+  },
+  {
+    "id": 1,
+    "name": "Exit",
+    "assetUrl": "assets/images/chunkobject/door.png",
+    "description": "This is the end of the level."
+  }
+]

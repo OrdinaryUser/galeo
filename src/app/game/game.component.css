@@ -2,6 +2,7 @@
     border: 2px solid black;
     display: flex;
     flex-wrap: wrap;
+    flex-basis: bottom left;
     box-sizing: content-box;
     width: 800px;
     margin: auto;

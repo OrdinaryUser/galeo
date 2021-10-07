@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "name": "Hidden",
+    "assetUrl": "assets/images/chunkterrain/hidden.png",
+    "description": "Nothing here that you can see."
+  },
+  {
+    "id": 1,
+    "name": "Grass",
+    "assetUrl": "assets/images/chunkterrain/grass.png",
+    "description": "An empty field of wild grass blowing in the wind."
+  }
+]

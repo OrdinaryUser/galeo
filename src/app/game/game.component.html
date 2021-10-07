@@ -1,9 +1,9 @@
-﻿<div class="game-board" getElementDirective>
+﻿<div class="game-board">
   <galeo-chunk *ngFor='let chunk of map'
                class="chunk"
-               [terrainUrl]='chunk.terrainUrl'
-               [terrainDescription]='chunk.terrainDescription'
-               [objectUrl]='chunk.objectUrl'
-               [objectDescription]='chunk.objectDescription'>
+               [terrainName]='chunk.terrainName'
+               [objectName]='chunk.objectName'
+               [xPosition]='chunk.xPosition'
+               [yPosition]='chunk.yPosition'>
   </galeo-chunk>
 </div>
