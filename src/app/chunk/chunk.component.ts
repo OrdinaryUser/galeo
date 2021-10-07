@@ -1,9 +1,9 @@
-import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ChunkObject } from '../shared/ChunkObject';
 import { ChunkTerrain } from '../shared/ChunkTerrain';
-import { TerrainService } from '../shared/terrain.service';
-import { ObjectService } from '../shared/object.service';
+import { TerrainService } from '../shared/services/terrain.service';
+import { ObjectService } from '../shared/services/object.service';
 
 @Component({
   selector: 'galeo-chunk',

@@ -1,5 +1,9 @@
-﻿<div class="game-board">
-  <galeo-chunk *ngFor='let chunk of map'
+﻿<div class="instructions">
+  <h1>Welcome to Galeo!</h1>
+  <p>Use the WASD keys to navigate the knight to the exit door.</p>
+</div>
+<div class="game-board">
+  <galeo-chunk *ngFor='let chunk of map.mapChunks'
                class="chunk"
                [terrainName]='chunk.terrainName'
                [objectName]='chunk.objectName'

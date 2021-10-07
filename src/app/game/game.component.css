@@ -2,11 +2,10 @@
     border: 2px solid black;
     display: flex;
     flex-wrap: wrap;
-    flex-basis: bottom left;
     box-sizing: content-box;
-    width: 800px;
+    width: 1200px;
     margin: auto;
 }
 galeo-chunk {
-    width: 400px;
+    width: 600px;
 }

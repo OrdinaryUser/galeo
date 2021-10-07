@@ -1,0 +1,62 @@
+[
+  {
+    "mapName": "Level 1",
+    "mapDifficulty": "Easy",
+    "mapChunks": [
+      {
+        "terrainName": "Grass",
+        "objectName": "Player",
+        "xPosition": 1,
+        "yPosition": 1
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 1,
+        "yPosition": 2
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 2,
+        "yPosition": 1
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "Exit",
+        "xPosition": 2,
+        "yPosition": 2
+      }
+    ]
+  },
+  {
+    "mapName": "Level 2",
+    "mapDifficulty": "Easy",
+    "mapChunks": [
+      {
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 1,
+        "yPosition": 1
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "Player",
+        "xPosition": 1,
+        "yPosition": 2
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "Exit",
+        "xPosition": 2,
+        "yPosition": 1
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 2,
+        "yPosition": 2
+      }
+    ]
+  }
+]

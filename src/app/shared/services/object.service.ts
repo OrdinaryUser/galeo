@@ -1,20 +1,20 @@
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, throwError } from "rxjs";
-import { catchError, filter, tap } from "rxjs/operators";
-import { ChunkTerrain } from "./ChunkTerrain";
+import { catchError } from "rxjs/operators";
+import { ChunkObject } from "../ChunkObject";
 
 @Injectable({
     providedIn: 'root'
 })
 
-export class TerrainService {
-    private terrainUrl = 'api/chunkterrains.json';
+export class ObjectService {
+    private objectUrl = 'api/chunkobjects.json';
 
     constructor(private http: HttpClient) { }
 
-    getTerrains(): Observable<ChunkTerrain[]> {
-        return this.http.get<ChunkTerrain[]>(this.terrainUrl).pipe(
+    getObjects(): Observable<ChunkObject[]> {
+        return this.http.get<ChunkObject[]>(this.objectUrl).pipe(
             catchError(this.handleError)
         );
     }
