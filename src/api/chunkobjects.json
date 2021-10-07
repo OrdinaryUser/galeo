@@ -10,5 +10,17 @@
     "name": "Exit",
     "assetUrl": "assets/images/chunkobject/door.png",
     "description": "This is the end of the level."
+  },
+  {
+    "id": 2,
+    "name": "Rock",
+    "assetUrl": "assets/images/chunkobject/rock.png",
+    "description": "A huge boulder blocks the path."
+  },
+  {
+    "id": 3,
+    "name": "Forest",
+    "assetUrl": "assets/images/chunkobject/forest.png",
+    "description": "A dense forest."
   }
 ]

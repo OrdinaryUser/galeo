@@ -7,25 +7,29 @@
         "terrainName": "Grass",
         "objectName": "Player",
         "xPosition": 1,
-        "yPosition": 1
+        "yPosition": 1,
+        "traversable": true
       },
       { 
         "terrainName": "Grass",
         "objectName": "",
         "xPosition": 1,
-        "yPosition": 2
+        "yPosition": 2,
+        "traversable": true
       },
       { 
         "terrainName": "Grass",
         "objectName": "",
         "xPosition": 2,
-        "yPosition": 1
+        "yPosition": 1,
+        "traversable": true
       },
       { 
         "terrainName": "Grass",
         "objectName": "Exit",
         "xPosition": 2,
-        "yPosition": 2
+        "yPosition": 2,
+        "traversable": true
       }
     ]
   },
@@ -37,25 +41,98 @@
         "terrainName": "Grass",
         "objectName": "",
         "xPosition": 1,
-        "yPosition": 1
+        "yPosition": 1,
+        "traversable": true
       },
       { 
         "terrainName": "Grass",
         "objectName": "Player",
         "xPosition": 1,
-        "yPosition": 2
+        "yPosition": 2,
+        "traversable": true
       },
       { 
         "terrainName": "Grass",
         "objectName": "Exit",
         "xPosition": 2,
-        "yPosition": 1
+        "yPosition": 1,
+        "traversable": true
       },
       { 
         "terrainName": "Grass",
         "objectName": "",
         "xPosition": 2,
-        "yPosition": 2
+        "yPosition": 2,
+        "traversable": true
+      }
+    ]
+  },
+  {
+    "mapName": "Level 3",
+    "mapDifficulty": "Easy",
+    "mapChunks": [
+      {
+        "terrainName": "Grass",
+        "objectName": "Player",
+        "xPosition": 1,
+        "yPosition": 1,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 2,
+        "yPosition": 1,
+        "traversable": true
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 3,
+        "yPosition": 1,
+        "traversable": true
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 1,
+        "yPosition": 2,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Stones",
+        "objectName": "Rock",
+        "xPosition": 2,
+        "yPosition": 2,
+        "traversable": false
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "Forest",
+        "xPosition": 3,
+        "yPosition": 2,
+        "traversable": false
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 1,
+        "yPosition": 3,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 2,
+        "yPosition": 3,
+        "traversable": true
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "Exit",
+        "xPosition": 3,
+        "yPosition": 3,
+        "traversable": true
       }
     ]
   }

@@ -3,4 +3,5 @@ export interface MapChunk {
     objectName: string;
     xPosition: number;
     yPosition: number;
+    traversable: boolean;
 }

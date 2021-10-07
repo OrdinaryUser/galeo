@@ -8,9 +8,10 @@ import { MapService } from '../shared/services/map.service';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
+  public gameSize = 1200;
   public mapColumns: number = 2;
   public mapRows: number = 2;
-  public mapChunkSize: number = 1200 / this.mapColumns;
+  public mapChunkSize: number = 1200;
   // Cartesian plane x/y coordinates
   public map: Map = {
     "mapName": "undefined",
@@ -35,6 +36,7 @@ export class GameComponent implements OnInit {
         // Pick a random map
         this.map = maps[Math.floor(Math.random() * maps.length)];
         this.ArrangeMap();
+        this.mapChunkSize = this.gameSize / this.getMapWidth();
       },
       error: err => this.errorMessage += err
     });

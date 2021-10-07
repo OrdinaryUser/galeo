@@ -10,5 +10,47 @@
     "name": "Grass",
     "assetUrl": "assets/images/chunkterrain/grass.png",
     "description": "An empty field of wild grass blowing in the wind."
+  },
+  {
+    "id": 2,
+    "name": "Cobblestone",
+    "assetUrl": "assets/images/chunkterrain/cobblestone.jpg",
+    "description": "A cobblestone path."
+  },
+  {
+    "id": 3,
+    "name": "Gray Brick",
+    "assetUrl": "assets/images/chunkterrain/graybrick.jpg",
+    "description": "An ominous dungeon floor."
+  },
+  {
+    "id": 4,
+    "name": "Mud",
+    "assetUrl": "assets/images/chunkterrain/mud.jpg",
+    "description": "Sticky mud. Good luck getting through this!"
+  },
+  {
+    "id": 5,
+    "name": "Red Sand",
+    "assetUrl": "assets/images/chunkterrain/redsand.jpg",
+    "description": "A mysterious red sand."
+  },
+  {
+    "id": 6,
+    "name": "Stones",
+    "assetUrl": "assets/images/chunkterrain/stony.jpg",
+    "description": "Rugged, mountainous terrain."
+  },
+  {
+    "id": 7,
+    "name": "Sand",
+    "assetUrl": "assets/images/chunkterrain/whitesand.jpg",
+    "description": "Pure, white sand."
+  },
+  {
+    "id": 8,
+    "name": "Wood Floor",
+    "assetUrl": "assets/images/chunkterrain/woodfloor.jpg",
+    "description": "Timber that's been crafted into flooring."
   }
 ]
