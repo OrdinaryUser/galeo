@@ -1,10 +1,64 @@
+.game-title {
+    margin: 10px auto;
+}
+.game-title h1 {
+    font-size: 64px;
+}
+.bordered {
+    border-style: solid;
+    border-width: 8px;
+    border-left-color: rgb(255, 215, 0);
+    border-top-color: rgb(255, 215, 0);
+    border-right-color: rgb(218, 185, 0);
+    border-bottom-color: rgb(218, 185, 0);
+}
 .game-board {
-    border: 2px solid black;
     display: flex;
     flex-wrap: wrap;
     box-sizing: content-box;
     margin: auto;
 }
+.shaded {
+    background-color:rgba(0, 0, 0, .8);
+}
+#instructions p {
+    font-size: 20px;
+}
+#inventory .slots {
+    display: flex;
+    flex-wrap: wrap;
+}
+#inventory .slots > div {
+    box-sizing: content-box;
+    border: 2px solid #ababab;
+    width: 45%;
+    height: 83px;
+    margin: 2px;
+}
 galeo-chunk {
     width: 600px;
+}
+.congratulations {
+    background-color: rgba(255,255,255,.8);
+    position: absolute;
+    top: 0;
+    left: 32px;
+    width: 816px;
+    height: 100%;
+    border: 4px black outset;
+    padding-top: 20%;
+    text-align: center;
+}
+.congratulations h1,
+.congratulations h4 {
+    color: black;
+}
+.congratulations h4 {
+    font-style: italic;
+}
+.congratulations .btn {
+    margin-top:20px;
+}
+a.btn:hover {
+    text-decoration: none;
 }

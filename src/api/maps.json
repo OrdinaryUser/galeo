@@ -1,74 +1,6 @@
 [
   {
-    "mapName": "Level 1",
-    "mapDifficulty": "Easy",
-    "mapChunks": [
-      {
-        "terrainName": "Grass",
-        "objectName": "Player",
-        "xPosition": 1,
-        "yPosition": 1,
-        "traversable": true
-      },
-      { 
-        "terrainName": "Grass",
-        "objectName": "",
-        "xPosition": 1,
-        "yPosition": 2,
-        "traversable": true
-      },
-      { 
-        "terrainName": "Grass",
-        "objectName": "",
-        "xPosition": 2,
-        "yPosition": 1,
-        "traversable": true
-      },
-      { 
-        "terrainName": "Grass",
-        "objectName": "Exit",
-        "xPosition": 2,
-        "yPosition": 2,
-        "traversable": true
-      }
-    ]
-  },
-  {
-    "mapName": "Level 2",
-    "mapDifficulty": "Easy",
-    "mapChunks": [
-      {
-        "terrainName": "Grass",
-        "objectName": "",
-        "xPosition": 1,
-        "yPosition": 1,
-        "traversable": true
-      },
-      { 
-        "terrainName": "Grass",
-        "objectName": "Player",
-        "xPosition": 1,
-        "yPosition": 2,
-        "traversable": true
-      },
-      { 
-        "terrainName": "Grass",
-        "objectName": "Exit",
-        "xPosition": 2,
-        "yPosition": 1,
-        "traversable": true
-      },
-      { 
-        "terrainName": "Grass",
-        "objectName": "",
-        "xPosition": 2,
-        "yPosition": 2,
-        "traversable": true
-      }
-    ]
-  },
-  {
-    "mapName": "Level 3",
+    "mapName": "3x3",
     "mapDifficulty": "Easy",
     "mapChunks": [
       {
@@ -87,7 +19,7 @@
       },
       {
         "terrainName": "Grass",
-        "objectName": "Mountain",
+        "objectName": "Rock",
         "xPosition": 3,
         "yPosition": 1,
         "traversable": false
@@ -108,7 +40,7 @@
       },
       {
         "terrainName": "Grass",
-        "objectName": "Forest",
+        "objectName": "Tree",
         "xPosition": 3,
         "yPosition": 2,
         "traversable": false
@@ -132,6 +64,563 @@
         "objectName": "Exit",
         "xPosition": 3,
         "yPosition": 3,
+        "traversable": true
+      }
+    ]
+  },
+  {
+    "mapName": "4x4",
+    "mapDifficulty": "Easy",
+    "mapChunks": [
+      {
+        "terrainName": "Sand",
+        "objectName": "Player",
+        "xPosition": 1,
+        "yPosition": 1,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 2,
+        "yPosition": 1,
+        "traversable": true
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "Tree",
+        "xPosition": 3,
+        "yPosition": 1,
+        "traversable": false
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "Tree",
+        "xPosition": 4,
+        "yPosition": 1,
+        "traversable": false
+      },
+      { 
+        "terrainName": "Sand",
+        "objectName": "Rock",
+        "xPosition": 1,
+        "yPosition": 2,
+        "traversable": false
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "",
+        "xPosition": 2,
+        "yPosition": 2,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Sand",
+        "objectName": "",
+        "xPosition": 3,
+        "yPosition": 2,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 4,
+        "yPosition": 2,
+        "traversable": true
+      },
+      {
+        "terrainName": "Red Sand",
+        "objectName": "Rock",
+        "xPosition": 1,
+        "yPosition": 3,
+        "traversable": false
+      },
+      {
+        "terrainName": "Red Sand",
+        "objectName": "",
+        "xPosition": 2,
+        "yPosition": 3,
+        "traversable": true
+      },
+      {
+        "terrainName": "Stones",
+        "objectName": "Volcano",
+        "xPosition": 3,
+        "yPosition": 3,
+        "traversable": false
+      },
+      {
+        "terrainName": "Red Sand",
+        "objectName": "",
+        "xPosition": 4,
+        "yPosition": 3,
+        "traversable": true
+      },
+      {
+        "terrainName": "Stones",
+        "objectName": "",
+        "xPosition": 1,
+        "yPosition": 4,
+        "traversable": true
+      },
+      {
+        "terrainName": "Stones",
+        "objectName": "Volcano",
+        "xPosition": 2,
+        "yPosition": 4,
+        "traversable": false
+      },
+      {
+        "terrainName": "Stones",
+        "objectName": "Exit",
+        "xPosition": 3,
+        "yPosition": 4,
+        "traversable": true
+      },
+      {
+        "terrainName": "Stones",
+        "objectName": "",
+        "xPosition": 4,
+        "yPosition": 4,
+        "traversable": true
+      }
+    ]
+  },
+  {
+    "mapName": "5x5",
+    "mapDifficulty": "Easy",
+    "mapChunks": [
+      {
+        "terrainName": "Grass",
+        "objectName": "Tree",
+        "xPosition": 1,
+        "yPosition": 1,
+        "traversable": false
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 2,
+        "yPosition": 1,
+        "traversable": true
+      },
+      {
+        "terrainName": "Gray Brick",
+        "objectName": "Fire",
+        "xPosition": 3,
+        "yPosition": 1,
+        "traversable": false
+      },
+      {
+        "terrainName": "Gray Brick",
+        "objectName": "Exit",
+        "xPosition": 4,
+        "yPosition": 1,
+        "traversable": true
+      },
+      {
+        "terrainName": "Gray Brick",
+        "objectName": "",
+        "xPosition": 5,
+        "yPosition": 1,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 1,
+        "yPosition": 2,
+        "traversable": true
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "",
+        "xPosition": 2,
+        "yPosition": 2,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Gray Brick",
+        "objectName": "",
+        "xPosition": 3,
+        "yPosition": 2,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Gray Brick",
+        "objectName": "Fire",
+        "xPosition": 4,
+        "yPosition": 2,
+        "traversable": false
+      },
+      { 
+        "terrainName": "Gray Brick",
+        "objectName": "",
+        "xPosition": 5,
+        "yPosition": 2,
+        "traversable": true
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "",
+        "xPosition": 1,
+        "yPosition": 3,
+        "traversable": true
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "Rock",
+        "xPosition": 2,
+        "yPosition": 3,
+        "traversable": false
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 3,
+        "yPosition": 3,
+        "traversable": true
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "Tree",
+        "xPosition": 4,
+        "yPosition": 3,
+        "traversable": false
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 5,
+        "yPosition": 3,
+        "traversable": true
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "Player",
+        "xPosition": 1,
+        "yPosition": 4,
+        "traversable": true
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "Tree",
+        "xPosition": 2,
+        "yPosition": 4,
+        "traversable": false
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "",
+        "xPosition": 3,
+        "yPosition": 4,
+        "traversable": true
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "",
+        "xPosition": 4,
+        "yPosition": 4,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 5,
+        "yPosition": 4,
+        "traversable": true
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 1,
+        "yPosition": 5,
+        "traversable": true
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "Rock",
+        "xPosition": 2,
+        "yPosition": 5,
+        "traversable": false
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "Rock",
+        "xPosition": 3,
+        "yPosition": 5,
+        "traversable": false
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 4,
+        "yPosition": 5,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "Tree",
+        "xPosition": 5,
+        "yPosition": 5,
+        "traversable": false
+      }
+    ]
+  },
+  {
+    "mapName": "6x6",
+    "mapDifficulty": "Easy",
+    "mapChunks": [
+      {
+        "terrainName": "Grass",
+        "objectName": "Tree",
+        "xPosition": 1,
+        "yPosition": 1,
+        "traversable": false
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "Tree",
+        "xPosition": 2,
+        "yPosition": 1,
+        "traversable": false
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 3,
+        "yPosition": 1,
+        "traversable": true
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 4,
+        "yPosition": 1,
+        "traversable": true
+      },
+      {
+        "terrainName": "Red Sand",
+        "objectName": "",
+        "xPosition": 5,
+        "yPosition": 1,
+        "traversable": true
+      },
+      {
+        "terrainName": "Red Sand",
+        "objectName": "",
+        "xPosition": 6,
+        "yPosition": 1,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 1,
+        "yPosition": 2,
+        "traversable": true
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "",
+        "xPosition": 2,
+        "yPosition": 2,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Sand",
+        "objectName": "",
+        "xPosition": 3,
+        "yPosition": 2,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Sand",
+        "objectName": "Fire",
+        "xPosition": 4,
+        "yPosition": 2,
+        "traversable": false
+      },
+      { 
+        "terrainName": "Red Sand",
+        "objectName": "Rock",
+        "xPosition": 5,
+        "yPosition": 2,
+        "traversable": false
+      },
+      { 
+        "terrainName": "Red Sand",
+        "objectName": "Exit",
+        "xPosition": 6,
+        "yPosition": 2,
+        "traversable": true
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "",
+        "xPosition": 1,
+        "yPosition": 3,
+        "traversable": true
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "Rock",
+        "xPosition": 2,
+        "yPosition": 3,
+        "traversable": false
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "",
+        "xPosition": 3,
+        "yPosition": 3,
+        "traversable": true
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "",
+        "xPosition": 4,
+        "yPosition": 3,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 5,
+        "yPosition": 3,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "Tree",
+        "xPosition": 6,
+        "yPosition": 3,
+        "traversable": false
+      },
+      {
+        "terrainName": "Red Sand",
+        "objectName": "Rock",
+        "xPosition": 1,
+        "yPosition": 4,
+        "traversable": false
+      },
+      {
+        "terrainName": "Red Sand",
+        "objectName": "",
+        "xPosition": 2,
+        "yPosition": 4,
+        "traversable": true
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "Fire",
+        "xPosition": 3,
+        "yPosition": 4,
+        "traversable": false
+      },
+      {
+        "terrainName": "Sand",
+        "objectName": "Rock",
+        "xPosition": 4,
+        "yPosition": 4,
+        "traversable": false
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 5,
+        "yPosition": 4,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 6,
+        "yPosition": 4,
+        "traversable": true
+      },
+      {
+        "terrainName": "Red Sand",
+        "objectName": "Fire",
+        "xPosition": 1,
+        "yPosition": 5,
+        "traversable": false
+      },
+      {
+        "terrainName": "Red Sand",
+        "objectName": "",
+        "xPosition": 2,
+        "yPosition": 5,
+        "traversable": true
+      },
+      {
+        "terrainName": "Red Sand",
+        "objectName": "",
+        "xPosition": 3,
+        "yPosition": 5,
+        "traversable": true
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 4,
+        "yPosition": 5,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "Tree",
+        "xPosition": 5,
+        "yPosition": 5,
+        "traversable": false
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 6,
+        "yPosition": 5,
+        "traversable": true
+      },
+      {
+        "terrainName": "Red Sand",
+        "objectName": "Player",
+        "xPosition": 1,
+        "yPosition": 6,
+        "traversable": true
+      },
+      {
+        "terrainName": "Red Sand",
+        "objectName": "",
+        "xPosition": 2,
+        "yPosition": 6,
+        "traversable": true
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "Rock",
+        "xPosition": 3,
+        "yPosition": 6,
+        "traversable": false
+      },
+      {
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 4,
+        "yPosition": 6,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 5,
+        "yPosition": 6,
+        "traversable": true
+      },
+      { 
+        "terrainName": "Grass",
+        "objectName": "",
+        "xPosition": 6,
+        "yPosition": 6,
         "traversable": true
       }
     ]

@@ -1,20 +1,38 @@
-﻿<div class="instructions">
-  <h1>Welcome to Galeo!</h1>
-  <p>Use the WASD keys to navigate the knight to the exit door.</p>
-</div>
-<div class="game-board"
-     [style.width.px]='gameSize'
-     [style.display]='gameDisplay'>
-  <galeo-chunk *ngFor='let chunk of map.mapChunks'
-               class="chunk"
-               [terrainName]='chunk.terrainName'
-               [objectName]='chunk.objectName'
-               [xPosition]='chunk.xPosition'
-               [yPosition]='chunk.yPosition'
-               [style.width.px]='mapChunkSize'>
-  </galeo-chunk>
-</div>
-<div class="congratulations" [style.display]='congratDisplay'>
-  Congratulations! You've beaten the level!
-  <a class="btn btn-primary" href="">Play again?</a>
+﻿<div class="row">
+  <div class="col-12">
+    <div class="game-title"
+         [style.width.px]='gameSize'>
+      <h1 class="text-center">Welcome to Galeo!</h1>
+    </div>
+  </div>
+  <div class="col-2 bordered shaded p-3" id="instructions">
+    <p>The princess isn't just in another castle, she's in another world!</p>
+    <p>Use the WASD keys to navigate the hero to the exit door.</p>
+  </div>
+  <div class="col-8" style="position: relative;">
+    <div class="game-board bordered"
+         [style.width.px]='gameSize'>
+      <galeo-chunk *ngFor='let chunk of map.mapChunks'
+                    class="chunk"
+                    [terrainName]='chunk.terrainName'
+                    [objectName]='chunk.objectName'
+                    [xPosition]='chunk.xPosition'
+                    [yPosition]='chunk.yPosition'
+                    [style.width.px]='mapChunkSize'>
+      </galeo-chunk>
+    </div>
+    <div class="congratulations" *ngIf='endLevel'>
+      <h1>Congratulations!</h1>
+      <h4>You beat the level!</h4>
+      <a class="btn btn-primary" href="">Play again?</a>
+    </div>
+  </div>
+  <div class="col-2 bordered shaded" id="inventory">
+    <h2 class="text-center mt-2">Inventory</h2>
+    <div class="slots">
+      <div *ngFor='let item of inventoryItems'>
+
+      </div>
+    </div>
+  </div>
 </div>

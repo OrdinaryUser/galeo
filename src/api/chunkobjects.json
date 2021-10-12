@@ -2,7 +2,7 @@
   {
     "id": 0,
     "name": "Player",
-    "assetUrl": "assets/images/chunkobject/knight.png",
+    "assetUrl": "assets/images/chunkobject/chopper.gif",
     "description": "Our valiant hero!"
   },
   {
@@ -34,5 +34,17 @@
     "name": "Volcano",
     "assetUrl": "assets/images/chunkobject/volcano.png",
     "description": "This volcano bubbles with boiling lava."
+  },
+  {
+    "id": 6,
+    "name": "Tree",
+    "assetUrl": "assets/images/chunkobject/tree.png",
+    "description": "A towering tree."
+  },
+  {
+    "id": 7,
+    "name": "Fire",
+    "assetUrl": "assets/images/chunkobject/fire.png",
+    "description": "A blazing inferno."
   }
 ]

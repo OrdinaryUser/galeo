@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnDestroy } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnDestroy, Output } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ChunkObject } from '../shared/ChunkObject';
 import { ChunkTerrain } from '../shared/ChunkTerrain';
@@ -44,5 +44,6 @@ export class ChunkComponent implements OnChanges, OnDestroy {
 
   ngOnDestroy(): void {
       this.tsub.unsubscribe();
+      this.osub.unsubscribe();
   }
 }

@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, Renderer2 } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Map } from '../shared/Map';
 import { MapService } from '../shared/services/map.service';
@@ -10,8 +10,9 @@ import { MapService } from '../shared/services/map.service';
 export class GameComponent implements OnInit {
   public gameSize: number = 800;
   public mapChunkSize: number = 800;
-  public gameDisplay: string = 'flex';
-  public congratDisplay: string = 'none';
+  public endLevel: boolean = false;
+  public inventoryItems: Array<string> = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+  // Cartesian plane x/y coordinates
   public map: Map = {
     "mapName": "undefined",
     "mapDifficulty": "undefined",
@@ -33,8 +34,7 @@ export class GameComponent implements OnInit {
     this.msub = this.mapService.getMaps().subscribe({
       next: maps => {
         // Pick a random map
-        //this.map = maps[Math.floor(Math.random() * maps.length)];
-        this.map = maps[2];
+        this.map = maps[Math.floor(Math.random() * maps.length)];
         this.ArrangeMap();
         this.mapChunkSize = this.gameSize / this.getMapWidth();
       },
@@ -42,11 +42,12 @@ export class GameComponent implements OnInit {
     });
   }
 
+  // Rearrange the map to work with cartesian coordinates
   public ArrangeMap(): void {
-    // Rearrange the map to work with cartesian coordinates
     this.map.mapChunks.sort((a, b) => (a.yPosition < b.yPosition) ? 1 : (a.yPosition === b.yPosition) ? ((a.xPosition > b.xPosition) ? 1 : -1) : -1);
   }
 
+  // Movement functions
   @HostListener('document:keypress', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
     this.Move(event.key)
@@ -72,7 +73,10 @@ export class GameComponent implements OnInit {
   }
 
   public MovePlayer(from: number, to: number) {
-    this.map.mapChunks[from].objectName = '';
+    // Remove the player from the "from" chunk
+    this.map.mapChunks[from].objectName = ''
+
+    // Add it to the "to" chunk
     this.map.mapChunks[to].objectName = 'Player';
   }
 
@@ -85,10 +89,10 @@ export class GameComponent implements OnInit {
       var targetChunkIndex = this.map.mapChunks.findIndex(c => c.xPosition === playerChunk.xPosition && c.yPosition === playerChunk.yPosition + 1);
       var targetChunk = this.map.mapChunks[targetChunkIndex];
       if(targetChunk !== undefined && targetChunk.traversable) {
-        this.MovePlayer(playerChunkIndex, targetChunkIndex);
         if(targetChunk.objectName === "Exit") {
           this.EndLevel();
         }
+        this.MovePlayer(playerChunkIndex, targetChunkIndex);
       }
     } 
   }
@@ -102,10 +106,10 @@ export class GameComponent implements OnInit {
       var targetChunkIndex = this.map.mapChunks.findIndex(c => c.xPosition === playerChunk.xPosition - 1 && c.yPosition === playerChunk.yPosition);
       var targetChunk = this.map.mapChunks[targetChunkIndex];
       if(targetChunk !== undefined && targetChunk.traversable) {
-        this.MovePlayer(playerChunkIndex, targetChunkIndex);
         if(targetChunk.objectName === "Exit") {
           this.EndLevel();
         }
+        this.MovePlayer(playerChunkIndex, targetChunkIndex);
       }
     }
   }
@@ -119,10 +123,10 @@ export class GameComponent implements OnInit {
       var targetChunkIndex = this.map.mapChunks.findIndex(c => c.xPosition === playerChunk.xPosition && c.yPosition === playerChunk.yPosition - 1);
       var targetChunk = this.map.mapChunks[targetChunkIndex];
       if(targetChunk !== undefined && targetChunk.traversable) {
-        this.MovePlayer(playerChunkIndex, targetChunkIndex);
         if(targetChunk.objectName === "Exit") {
           this.EndLevel();
         }
+        this.MovePlayer(playerChunkIndex, targetChunkIndex);
       }
     }
   }
@@ -136,16 +140,15 @@ export class GameComponent implements OnInit {
       var targetChunkIndex = this.map.mapChunks.findIndex(c => c.xPosition === playerChunk.xPosition + 1 && c.yPosition === playerChunk.yPosition);
       var targetChunk = this.map.mapChunks[targetChunkIndex];
       if(targetChunk !== undefined && targetChunk.traversable) {
-        this.MovePlayer(playerChunkIndex, targetChunkIndex);
         if(targetChunk.objectName === "Exit") {
           this.EndLevel();
         }
+        this.MovePlayer(playerChunkIndex, targetChunkIndex);
       }
     }
   }
 
   public EndLevel() {
-    this.gameDisplay = 'none';
-    this.congratDisplay = 'flex';
+    this.endLevel = true;
   }
 }

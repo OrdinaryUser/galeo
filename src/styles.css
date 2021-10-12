@@ -1,19 +1,18 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
+@font-face {
+  font-family: Alagard;
+  src: url('/assets/fonts/alagard/alagard.ttf');
+}
 
 /* You can add global styles to this file, and also import other style files */
-div.card-header {
- font-size: large;
+* {
+  font-family: Alagard;
+  color:white;
 }
-
-div.card {
-  margin-top: 10px
+body {
+  background-image: url('/assets/images/chunkterrain/woodfloor.jpg');
 }
-
-.table {
-  margin-top: 10px
-}
-
 a {
   text-decoration: none; 
 }
